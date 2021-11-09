@@ -1,0 +1,34 @@
+﻿<Page x:Class="MarafonSKills.CoordMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MarafonSKills"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CoordMenu">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Text="Меню координатора" Style="{StaticResource Header}" FontSize="36"/>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Height="65" Width="250" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10" Content="Бегуны" FontSize="24"/>
+            <Button Grid.Column="1" Height="65" Width="250" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Content="Спонсоры" FontSize="24"/>
+        </Grid>
+    </Grid>
+</Page>

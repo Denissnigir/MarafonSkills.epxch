@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A32AEBB-C307-4CAE-B478-B1B808B5D910}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MarafonSKills</RootNamespace>
+    <AssemblyName>MarafonSKills</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Pages\Additionalnfo.xaml.cs">
+      <DependentUpon>Additionalnfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminMenu.xaml.cs">
+      <DependentUpon>AdminMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AuthMenu.xaml.cs">
+      <DependentUpon>AuthMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CharityList.xaml.cs">
+      <DependentUpon>CharityList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CoordMenu.xaml.cs">
+      <DependentUpon>CoordMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MarathonRegister.xaml.cs">
+      <DependentUpon>MarathonRegister.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Charity.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Country.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Employee.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Event.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\EventType.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Gender.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Marafon.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Marafon.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Marafon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Marafon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Marafon.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Marathon.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PartClass.cs" />
+    <Compile Include="Model\Position.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RaceKitOption.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Registration.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RegistrationEvent.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RegistrationStatus.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Role.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Runner.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\RunnerPartClass.cs" />
+    <Compile Include="Model\Sponsorship.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Timesheet.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Volunteer.cs">
+      <DependentUpon>Marafon.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegisterRunner.xaml.cs">
+      <DependentUpon>RegisterRunner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegistrationConfirmation.xaml.cs">
+      <DependentUpon>RegistrationConfirmation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RunnerMenu.xaml.cs">
+      <DependentUpon>RunnerMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RunnerSponsor.xaml.cs">
+      <DependentUpon>RunnerSponsor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RunnerValidate.xaml.cs">
+      <DependentUpon>RunnerValidate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ThanksSponsor.xaml.cs">
+      <DependentUpon>ThanksSponsor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Information.xaml.cs">
+      <DependentUpon>Information.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Pages\Additionalnfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AdminMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AuthMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CharityList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CoordMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\MarathonRegister.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RegisterRunner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\RegistrationConfirmation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RunnerMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RunnerSponsor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RunnerValidate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ThanksSponsor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Information.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Context.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\Marafon.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Marafon.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\Marafon.edmx.diagram">
+      <DependentUpon>Marafon.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="arise-logo.png" />
+    <Resource Include="aves-do-brazil-logo.png" />
+    <Resource Include="clara-santos-oliveira-institute-logo.png" />
+    <Resource Include="conquer-cancer-brazil.png" />
+    <Resource Include="diabetes-brazil-logo.png" />
+    <Resource Include="heart-health-sao-paulo-logo.png" />
+    <Resource Include="human-rights-centre-logo.png" />
+    <Resource Include="oxfam-international-logo.png" />
+    <Resource Include="querstadtein-logo.png" />
+    <Resource Include="save-the-children-fund-logo.png" />
+    <Resource Include="stay-pumped-logo.png" />
+    <Resource Include="the-red-cross-logo.png" />
+    <Resource Include="upbeat-logo.png" />
+    <Resource Include="wwsm-rescue-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\Marafon.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Marafon.edmx</DependentUpon>
+      <LastGenOutput>Marafon.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\Marafon.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Marafon.edmx</DependentUpon>
+      <LastGenOutput>Marafon.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
