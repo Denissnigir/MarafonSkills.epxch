@@ -83,7 +83,7 @@ namespace MarafonSKills
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Regex regex = new Regex("[a-z0-9].*[a-z0-9]@[a-z]+[.][a-z]+");
-            if (!string.IsNullOrWhiteSpace(filePath) && !string.IsNullOrWhiteSpace(EmailTB.Text) && !string.IsNullOrWhiteSpace(PasswordTB.Text) && !string.IsNullOrWhiteSpace(RepeatPasswordTB.Text) &&
+            if ((!string.IsNullOrWhiteSpace(runnerData.Photo) || !string.IsNullOrWhiteSpace(fileName)) && !string.IsNullOrWhiteSpace(EmailTB.Text) && !string.IsNullOrWhiteSpace(PasswordTB.Text) && !string.IsNullOrWhiteSpace(RepeatPasswordTB.Text) &&
                 !string.IsNullOrWhiteSpace(NameTB.Text) && !string.IsNullOrWhiteSpace(SurnameTB.Text) && GenderCB.SelectedIndex >= 0 && BirthdateTB.SelectedDate != null && CountryCB.SelectedIndex >= 0)
             {
                 if(BirthdateTB.SelectedDate >= new DateTime(2010, 01, 01))
