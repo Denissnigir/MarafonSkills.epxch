@@ -10,7 +10,7 @@ namespace MarafonSKills.Model
 {
     public partial class Runner
     {
-        public byte[] image
+        public byte[] image // Выгрузка фотки в битах
         {
             get
             {
