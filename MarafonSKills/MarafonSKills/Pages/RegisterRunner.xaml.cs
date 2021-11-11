@@ -68,7 +68,7 @@ namespace MarafonSKills
             UserGrid.DataContext = userData;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e) // Выбор фото!!
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if ((bool)openFileDialog.ShowDialog())
@@ -82,7 +82,7 @@ namespace MarafonSKills
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Regex regex = new Regex("[a-z0-9].*[a-z0-9]@[a-z]+[.][a-z]+");
+            Regex regex = new Regex("[a-z0-9].*[a-z0-9]@[a-z]+[.][a-z]+"); // Регекс на email!
             if ((!string.IsNullOrWhiteSpace(runnerData.Photo) || !string.IsNullOrWhiteSpace(fileName)) && !string.IsNullOrWhiteSpace(EmailTB.Text) && !string.IsNullOrWhiteSpace(PasswordTB.Text) && !string.IsNullOrWhiteSpace(RepeatPasswordTB.Text) &&
                 !string.IsNullOrWhiteSpace(NameTB.Text) && !string.IsNullOrWhiteSpace(SurnameTB.Text) && GenderCB.SelectedIndex >= 0 && BirthdateTB.SelectedDate != null && CountryCB.SelectedIndex >= 0)
             {

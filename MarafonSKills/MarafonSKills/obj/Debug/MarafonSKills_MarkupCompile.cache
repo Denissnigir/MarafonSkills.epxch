@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\0dmin\source\repos\GITrep\123\gitrep\MarafonSkills.epxch\MarafonSKills\MarafonSKills\obj\Debug\
+C:\Repos\MarafonSkills.epxch\MarafonSKills\MarafonSKills\obj\Debug\
 MarafonSKills
 none
 false
 DEBUG;TRACE
-C:\Users\0dmin\source\repos\GITrep\123\gitrep\MarafonSkills.epxch\MarafonSKills\MarafonSKills\App.xaml
+C:\Repos\MarafonSkills.epxch\MarafonSKills\MarafonSKills\App.xaml
 15-891106281
 21377632392
-43437230615
-18-394085854
+44-405128752
+18272115793
 Pages\Additionalnfo.xaml;Pages\AdminMenu.xaml;Pages\AuthMenu.xaml;Pages\CharityList.xaml;Pages\CoordMenu.xaml;MainWindow.xaml;Pages\MarathonRegister.xaml;Pages\RegisterRunner.xaml;Pages\RegistrationConfirmation.xaml;Pages\RunnerMenu.xaml;Pages\RunnerSponsor.xaml;Pages\RunnerValidate.xaml;Pages\ThanksSponsor.xaml;Windows\Information.xaml;Windows\MainMenu.xaml;
 
-False
+True
 

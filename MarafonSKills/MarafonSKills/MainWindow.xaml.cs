@@ -35,7 +35,7 @@ namespace MarafonSKills
             dispatcherTimer.Start();
         }
 
-        private void tick(object sender, EventArgs e)
+        private void tick(object sender, EventArgs e) // Таймер 
         {
             var curDate = DateTime.Now;
             TimeSpan timeSpan = dateOfEvent - curDate;

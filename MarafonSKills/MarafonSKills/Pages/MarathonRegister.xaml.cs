@@ -44,7 +44,7 @@ namespace MarafonSKills
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Regex regex = new Regex("^0");
+            Regex regex = new Regex("^0"); // Регекс на некорректную сумму
             if (Regex.IsMatch(CharityAmount.Text, Convert.ToString(regex), RegexOptions.IgnoreCase))
             {
                 MessageBox.Show("Введите корректную сумму!");
@@ -62,7 +62,7 @@ namespace MarafonSKills
             PriceCount();
         }
 
-        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e) // НЕ ЗАБУДЬ!!!!
+        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e) // НЕ ЗАБУДЬ!!!! ВВОД ТОЛЬКО ЦИФРЫ
         {
             if (!Char.IsDigit(e.Text, 0))
             {
